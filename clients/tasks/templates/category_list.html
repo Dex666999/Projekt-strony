@@ -1,0 +1,9 @@
+<h1>Lista kategorii dla klienta {{ client.name }}</h1>
+
+<ul>
+{% for category in categories %}
+    <li><a href="{% url 'task_list_by_category' client_id=client.id category_id=category.id %}">{{ category.name }}</a></li>
+{% empty %}
+    <li>Brak kategorii.</li>
+{% endfor %}
+</ul>

@@ -1,0 +1,16 @@
+<h1>Lista zadań dla klienta {{ client.name }}</h1>
+
+<ul>
+{% for category in categories %}
+    <li>{{ category.name }}</li>
+    <ul>
+    {% for task in category.task_set.all %}
+        <li>{{ task.title }} - {{ task.description }}{% if task.completed %} (zakończone){% endif %}</li>
+    {% empty %}
+        <li>Brak zadań.</li>
+    {% endfor %}
+    </ul>
+{% empty %}
+    <li>Brak kategorii.</li>
+{% endfor %}
+</ul>

@@ -1,0 +1,22 @@
+root {
+    --green: #33ccae;
+    --dark: #1b1b1b;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justyfi-content: center;
+    alhin-items: center;
+    background: var(--green)
+    background: linear-gradient(to right top, var(--dark), var(green));
+
+}
+
+.container {
+    width:68%;
+    height:68%;
+    background: rgba(0, 0, 0, 0.75 );
+
+}
